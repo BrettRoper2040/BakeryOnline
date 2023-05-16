@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using BakeOnline.Models;
 
 namespace BakeOnline.Tests
@@ -9,9 +10,12 @@ namespace BakeOnline.Tests
         [TestMethod]
         public void AddVendorToList()
         {
-            var vendorsList = Vendors.GetAll();
+            Vendors MyVendor = new Vendors("Vendor 1");
 
-            Assert.AreEqual(1, vendorsList.Count);
+            List<Vendors> VendorsList = Vendors.GetAll();
+
+            Assert.AreEqual(1, VendorsList.Count);
+            Assert.AreEqual(MyVendor, VendorsList[0]);
         }
     }
 }

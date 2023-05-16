@@ -19,11 +19,11 @@
       <p>There are no current Vendors.</p>
     }
     <ul>
-      @foreach (Item item in Model)
+      @foreach (Vendors vendor in Model)
       {
-        <li>@item.Description</li>
+        <li>@vendor.Description</li>
       }
     </ul>
-    <a href="/items/new">Add a new item.</a>
+    <a href="/Vendors/new">Add a new Vendor?.</a>
   </body>
 </html>

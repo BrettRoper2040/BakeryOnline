@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using TwoDoList.Models;
+using BakeOnline.Models;
 using System.Collections.Generic;
 
 namespace BakeOnline.Controllers
@@ -10,7 +10,7 @@ namespace BakeOnline.Controllers
     [HttpGet("/Vendors")]
     public ActionResult Index()
     {
-      List<Item> allItems = Item.GetAll();
+      List<Vendors> allItems = Vendors.GetAll();
       return View(allItems);
     }
   }

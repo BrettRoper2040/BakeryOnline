@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 
-namespace TwoDoList.Models
+namespace BakeOnline.Models
 {
-  public class Item
+  public class Vendors
   {
     public string Description { get; set; }
-    private static List<Item> _instances = new List<Item> { };
+    private static List<Vendors> _instances = new List<Vendors> { };
 
-    public Item(string description)
+    public Vendors(string description)
     {
       Description = description;
       _instances.Add(this);
     }
 
-    public static List<Item> GetAll()
+    public static List<Vendors> GetAll()
     {
       return _instances;
     }
