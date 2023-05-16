@@ -18,4 +18,23 @@ namespace BakeOnline.Tests
             Assert.AreEqual(MyVendor, VendorsList[0]);
         }
     }
+
+    [TestClass]
+    public class OrderTests
+    {
+        [TestMethod]
+        public void AddOrderToVendor()
+        {
+            Orders MyOrder = new Orders("Ice Cream");
+
+            Vendors MyLittleVendor = new Vendors("V1");
+
+            MyLittleVendor.AddOrder(MyOrder);
+
+            List<Orders> ListOfLittle = MyLittleVendor.Orders; 
+
+            Assert.AreEqual(1, ListOfLittle.Count);
+            Assert.AreEqual(MyOrder, ListOfLittle[0]);
+        }
+    }
 }
