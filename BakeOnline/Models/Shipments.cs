@@ -27,7 +27,7 @@ namespace BakeOnline.Models
 
         public void AddOrder(Orders newOrder)
         {
-
+            Orders.Add(newOrder);
         }
     }
 }
