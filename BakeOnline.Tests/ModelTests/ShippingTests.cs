@@ -37,4 +37,24 @@ namespace BakeOnline.Tests
             Assert.AreEqual(MyOrder, ListOfLittle[0]);
         }
     }
+
+    [TestClass]
+
+    public class GetAllTests
+    {
+        [TestMethod]
+        public void ListAllVendors()
+        {
+            Vendors MyFirstVendor = new Vendors("V1");
+            Vendors MySecondVendor = new Vendors("V2");
+            Vendors MyThirdVendor = new Vendors("V3");
+
+            Vendors[] TestArray = new Vendors[] {MyFirstVendor, MySecondVendor, MyThirdVendor};
+
+            List<Vendors> NewVendorsList = Vendors.GetAll();
+
+            Assert.AreEqual(3, NewVendorsList.Count);
+            Assert.AreEqual(TestArray, NewVendorsList);
+        }
+    }
 }
