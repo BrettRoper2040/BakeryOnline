@@ -6,6 +6,22 @@ namespace BakeOnline.Tests
 {
     [TestClass]
 
+    public class ClearAllTests
+    {  
+        [TestMethod]
+        public void ClearAllVendors()
+        {
+            Vendors VendorDoof = new Vendors("Lorem");
+            
+             List<Vendors> NewVendorsList = Vendors.GetAll();
+
+            Vendors.ClearAll();
+            Assert.AreEqual(0, NewVendorsList.Count);
+        }
+
+    }
+    [TestClass]
+
     public class GetAllTests
     {
         [TestMethod]
