@@ -29,5 +29,10 @@ namespace BakeOnline.Models
         {
             Orders.Add(newOrder);
         }
+
+        public void ClearOrders()
+        {
+
+        }
     }
 }

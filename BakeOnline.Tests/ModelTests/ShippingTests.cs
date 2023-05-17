@@ -76,4 +76,26 @@ namespace BakeOnline.Tests
             Assert.AreEqual(MyOrder, ListOfLittle[0]);
         }
     }
+
+    [TestClass]
+
+    public class ClearOrderTests
+    {
+        [TestMethod]
+        public void ClearOrdersFromVendor()
+        {
+            Vendors.ClearAll();
+            Orders MyOrder = new Orders("Pizza");
+
+            Vendors MyVendor = new Vendors("V2");
+
+            MyVendor.AddOrder(MyOrder);
+
+            List<Orders> ListOfOrders = MyVendor.Orders; 
+
+            MyVendor.ClearOrders();
+
+            Assert.AreEqual(0, ListOfOrders.Count);
+        }
+    }
 }
