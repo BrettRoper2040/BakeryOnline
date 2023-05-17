@@ -32,7 +32,7 @@ namespace BakeOnline.Models
 
         public void ClearOrders()
         {
-
+            Orders.Clear();
         }
     }
 }
